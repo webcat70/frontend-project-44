@@ -1,3 +1,3 @@
-import hello from '../src/cli.js';
+import hellogetName from '../src/cli.js';
 
-hello();
+hellogetName();
