@@ -1,3 +1,5 @@
-import hellogetName from '../src/cli.js';
+#!/usr/bin/env node
 
-hellogetName();
+import getName from '../src/cli.js';
+
+getName();
