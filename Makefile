@@ -12,3 +12,9 @@ brain-even: # Запускает игру brain-even
 
 brain-calc: # Запускает игру brain-calc
 	node bin/brain-calc.js
+
+brain-gcd: # Запускает игру brain-gcd
+	node bin/brain-gcd.js
+
+brain-progression: # Запускает игру brain-progression
+	node bin/brain-progression.js
