@@ -16,3 +16,6 @@ Brain-gcd Суть игры в следующем: пользователю по
 
 Brain-progression Суть игры в следующем: показываем игроку ряд чисел, образующий арифметическую прогрессию, заменив любое из чисел двумя точками. Игрок должен определить это число.
 [![asciicast](https://asciinema.org/a/Ka1bhiVLGgaXQ7QtRXKFnxCzz.svg)](https://asciinema.org/a/Ka1bhiVLGgaXQ7QtRXKFnxCzz)
+
+Brain-prime Суть игры в следующем: пользователь должен ответить на вопрос: Простое это число или нет? Если да ответ 'yes' если нет ответ 'no'.
+[![asciicast](https://asciinema.org/a/0TbHrYxiPkzMxQyN77bVAQye5.svg)](https://asciinema.org/a/0TbHrYxiPkzMxQyN77bVAQye5)

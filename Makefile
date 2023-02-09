@@ -18,3 +18,6 @@ brain-gcd: # Запускает игру brain-gcd
 
 brain-progression: # Запускает игру brain-progression
 	node bin/brain-progression.js
+
+brain-prime: # Запускает игру brain-prime
+	node bin/brain-prime.js

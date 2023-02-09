@@ -1,6 +1,8 @@
-import readlineSync from 'readline-sync';
-import greetings from '../cli.js';
 import getRandomNumber from '../util.js';
+import indexGames from '../index.js';
+
+
+const description = 'What is the result of the expression?';
 
 const getCalc = (num1, num2, sign) => {
 	switch (sign) {
@@ -14,27 +16,15 @@ const getCalc = (num1, num2, sign) => {
 };
 
 export default () => {
-	const games = (getCalc, getRandomNumber) => {
-		const name = greetings();
+	const games = () => {
 		const signsArray = ['+', '-', '*'];
-		console.log('What is the result of the expression?');
-		for (let i = 1; i <= 3; i += 1) {
-			const firstOperand = getRandomNumber(1, 100);
-			const secondOperand = getRandomNumber(1, 100);
-			const signIndex = getRandomNumber(0, signsArray.length - 1);
-			const sign = signsArray[signIndex];
-			console.log(`Question: ${firstOperand} ${sign} ${secondOperand}`);
-			const answer = readlineSync.question('Your answer: ');
-			if (getCalc(firstOperand, secondOperand, sign) === Number(answer)) {
-				console.log('Correct!');
-			} else {
-				console.log(`'${answer}' is wrong answer ;(. Correct answer was '${getCalc(firstOperand, secondOperand, sign)}'.`);
-				console.log(`Let's try again, ${name}!`);
-				return;
-			}
-		};
-		console.log(`Congratulations, ${name}!`);
-		return;
+		const firstOperand = getRandomNumber(1, 100);
+		const secondOperand = getRandomNumber(1, 100);
+		const signIndex = getRandomNumber(0, signsArray.length - 1);
+		const sign = signsArray[signIndex];
+		const result = getCalc(firstOperand, secondOperand, sign);
+		const question = `${firstOperand} ${sign} ${secondOperand}`;
+		return [String(result), question];
 	};
-	games(getCalc, getRandomNumber);
+	indexGames(games, description);
 };
