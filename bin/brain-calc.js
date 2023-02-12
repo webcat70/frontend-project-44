@@ -1,4 +1,4 @@
-import brainCalc from '../src/games/brain-calc.js';
+import startBrainCalc from '../src/games/brain-calc.js';
 
-brainCalc();
+startBrainCalc();
 

@@ -1,5 +1,5 @@
 import getRandomNumber from '../util.js';
-import indexGames from '../index.js';
+import runGames from '../index.js';
 
 const description = 'What number is missing in the progression?';
 
@@ -15,14 +15,15 @@ const getProgression = (number, increment, progressionLength) => {
 	return progression;
 };
 
+const getRoundData = () => {
+	const array = getProgression(number, increment, progressionLength);
+	const hiddenNumber = getRandomNumber(0, progressionLength - 1);
+	const result = array[hiddenNumber];
+	array[hiddenNumber] = '..';
+	const question = `${array.join(' ')}`;
+	return [String(result), question];
+};
+
 export default () => {
-	const games = () => {
-		const array = getProgression(number, increment, progressionLength);
-		const hiddenNumber = getRandomNumber(0, progressionLength - 1);
-		const result = array[hiddenNumber];
-		array[hiddenNumber] = '..';
-		const question = `${array.join(' ')}`;
-		return [String(result), question];
-	}
-	indexGames(games, description);
+	runGames(getRoundData, description);
 };

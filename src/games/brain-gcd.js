@@ -1,5 +1,5 @@
 import getRandomNumber from '../util.js';
-import indexGames from '../index.js';
+import runGames from '../index.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
@@ -12,13 +12,14 @@ const gcd = (a, b) => {
 	return gcd(min, max % min);
 };
 
+const getRoundData = () => {
+	const firstOperand = getRandomNumber(1, 100);
+	const secondOperand = getRandomNumber(1, 100);
+	const result = gcd(firstOperand, secondOperand);
+	const question = `${firstOperand} ${secondOperand}`;
+	return [String(result), question];
+	};
+
 export default () => {
-	const games = () => {
-		const firstOperand = getRandomNumber(1, 100);
-		const secondOperand = getRandomNumber(1, 100);
-		const result = gcd(firstOperand, secondOperand);
-		const question = `${firstOperand} ${secondOperand}`;
-		return [String(result), question];
-		};
-		indexGames(games, description);
+		runGames(getRoundData, description);
 	};

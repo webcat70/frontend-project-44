@@ -1,5 +1,5 @@
 import getRandomNumber from '../util.js';
-import indexGames from '../index.js';
+import runGames from '../index.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -11,12 +11,13 @@ const getEven = (num) => {
 	}
 };
 
+const getRoundData = () => {
+	const randomNumber = getRandomNumber(1, 100);
+	const result = getEven(randomNumber);
+	const question = randomNumber;
+	return [result, question];
+};
+
 export default () => {
-	const games = () => {
-		const randomNumber = getRandomNumber(1, 100);
-		const result = getEven(randomNumber);
-		const question = randomNumber;
-		return [result, question];
-	};
-	indexGames(games, description);
+	runGames(getRoundData, description);
 };
