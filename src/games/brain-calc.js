@@ -1,23 +1,23 @@
-import getRandomNumber from "../util.js";
-import runGames from "../index.js";
+import getRandomNumber from '../util.js';
+import runGames from '../index.js';
 
-const description = "What is the result of the expression?";
+const description = 'What is the result of the expression?';
 
 const getCalc = (num1, num2, sign) => {
   switch (sign) {
-    case "+":
+    case '+':
       return num1 + num2;
-    case "-":
+    case '-':
       return num1 - num2;
-    case "*":
+    case '*':
       return num1 * num2;
     default:
-      throw new Error("Unknown state!");
+      throw new Error('Unknown state!');
   }
 };
 
 const getRoundData = () => {
-  const signsArray = ["+", "-", "*"];
+  const signsArray = ['+', '-', '*'];
   const firstOperand = getRandomNumber(1, 100);
   const secondOperand = getRandomNumber(1, 100);
   const signIndex = getRandomNumber(0, signsArray.length - 1);

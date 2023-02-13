@@ -1,15 +1,13 @@
-import getRandomNumber from "../util.js";
-import runGames from "../index.js";
+import getRandomNumber from '../util.js';
+import runGames from '../index.js';
 
-const description =
-  'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const getEven = (num) => {
   if (num % 2 === 0) {
-    return "yes";
-  } else {
-    return "no";
+    return 'yes';
   }
+  return 'no';
 };
 
 const getRoundData = () => {

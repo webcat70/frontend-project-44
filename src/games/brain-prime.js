@@ -1,8 +1,7 @@
-import getRandomNumber from "../util.js";
-import runGames from "../index.js";
+import getRandomNumber from '../util.js';
+import runGames from '../index.js';
 
-const description =
-  'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const getPrime = (number) => {
   if (number <= 1) {
@@ -19,7 +18,7 @@ const getPrime = (number) => {
 const getRoundData = () => {
   const randomNumber = getRandomNumber(1, 100);
   const question = randomNumber;
-  const result = getPrime(randomNumber) ? "yes" : "no";
+  const result = getPrime(randomNumber) ? 'yes' : 'no';
   return [result, question];
 };
 
