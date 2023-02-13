@@ -11,6 +11,8 @@ const getCalc = (num1, num2, sign) => {
       return num1 - num2;
     case "*":
       return num1 * num2;
+    default:
+      throw new Error("Unknown state!");
   }
 };
 
