@@ -4,7 +4,8 @@
 
 <a href="https://codeclimate.com/github/webcat70/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/db409412161a68c91025/maintainability" /></a>
 
-Проект Brain-games
+Project Brain-games
+Interactive math games in terminal
 
 Minimum requirements: node.js v18.14.0, terminal(command line), linux or macos.
 
